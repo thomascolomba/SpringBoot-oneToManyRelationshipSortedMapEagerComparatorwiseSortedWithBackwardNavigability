@@ -60,8 +60,12 @@ public class AccessingDataJpaApplication {
 		A a2 = new A("a2");
 		B b1 = new B("b1", a1);
 		B b2 = new B("b2", a1);
-		B b3 = new B("b3", a2);
-		B b4 = new B("b4", a2);
+		B b3 = new B("b3", null);
+		B b4 = new B("b4", null);
+		a2.getMyMap().put("b3", b3);
+		a2.getMyMap().put("b4", b4);
+//		B b3 = new B("b3", a2);
+//		B b4 = new B("b4", a2);
 		aRepository.save(a1);
 		aRepository.save(a2);
 		bRepository.save(b1);

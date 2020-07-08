@@ -24,7 +24,7 @@ public class B implements Serializable {
     private String b;
 
     @ManyToOne
-    @JoinColumn(name = "a_id", nullable = false)
+    @JoinColumn(name = "a_id", nullable = true)
     private A a;
 
     public B(String b, A a) {
